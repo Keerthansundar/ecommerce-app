@@ -46,4 +46,7 @@ target/
 !**/src/test/**/target/
 
 # Frontend specific
-.eslintcache 
+.eslintcache
+
+# Large files
+ecom-frontend/tailwindcss.exe 
