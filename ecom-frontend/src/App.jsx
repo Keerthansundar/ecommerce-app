@@ -11,6 +11,7 @@ import LogIn from './Components/auth/Login';
 import Register from './Components/auth/Register';
 import { Toaster } from "react-hot-toast";
 import PrivateRoute from './Components/PrivateRoute';
+import Checkout from './Components/checkout/Checkout';
 
 
 function App() {
@@ -26,10 +27,14 @@ function App() {
         <Route path='/contact' element={ <Contact />}/>
         <Route path='/cart' element={ <Cart />}/>
 
+        <Route path='/' element={<PrivateRoute  />}>
+           <Route path='/checkout' element={ <Checkout />}/>
+        </Route>
+
         <Route path='/' element={<PrivateRoute publicPage />}>
             <Route path='/login' element={ <LogIn />}/>
             <Route path='/register' element={ <Register />}/>
-          </Route>
+        </Route>
       </Routes>
 
     </React.Fragment>

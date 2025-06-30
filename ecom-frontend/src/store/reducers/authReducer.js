@@ -1,5 +1,4 @@
 const initialState = {
-    isAuthenticated: false,
     user: null,
     address: [],
     clientSecret: null,
@@ -9,11 +8,7 @@ const initialState = {
 export const authReducer = (state = initialState, action) => {
     switch (action.type) {
         case "LOGIN_USER":
-            return { 
-                ...state, 
-                user: action.payload,
-                isAuthenticated: true 
-            };
+            return { ...state, user: action.payload };
         case "USER_ADDRESS":
             return { ...state, address: action.payload };
         case "SELECT_CHECKOUT_ADDRESS":
@@ -26,11 +21,8 @@ export const authReducer = (state = initialState, action) => {
             return { ...state, clientSecret: null, selectedUserCheckoutAddress: null };
         case "LOG_OUT":
             return { 
-                isAuthenticated: false,
                 user: null,
                 address: null,
-                clientSecret: null,
-                selectedUserCheckoutAddress: null
              };
              
         default:

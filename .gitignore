@@ -1,21 +1,25 @@
-# Dependencies
+# -----------------
+# Node / React
+# -----------------
 node_modules/
-/.pnp
-.pnp.js
+ecom-frontend/node_modules/
 
-# Testing
-/coverage
+# Testing / Coverage
+coverage/
 
-# Production
-/build
-/dist
+# Production Builds
+build/
+dist/
+ecom-frontend/build/
+ecom-frontend/dist/
 
-# Environment files
+# Environment Variables
 .env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+.env.*
+ecom-frontend/.env
+ecom-frontend/.env.*
+sb-ecom/.env
+sb-ecom/.env.*
 
 # Logs
 npm-debug.log*
@@ -28,11 +32,13 @@ yarn-error.log*
 *.swp
 *.swo
 
-# OS
+# OS files
 .DS_Store
 Thumbs.db
 
-# Backend specific
+# -----------------
+# Backend (Spring Boot)
+# -----------------
 *.class
 *.jar
 *.war
@@ -41,12 +47,11 @@ Thumbs.db
 *.tar.gz
 *.rar
 target/
+sb-ecom/target/
 !.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
 
-# Frontend specific
+# -----------------
+# Frontend (Extra)
+# -----------------
 .eslintcache
-
-# Large files
-ecom-frontend/tailwindcss.exe 
+ecom-frontend/tailwindcss.exe
